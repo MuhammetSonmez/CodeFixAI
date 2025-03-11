@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugger AI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', path='/css/styles.css') }}"
+    />
+    <script defer src="{{ url_for('static', path='/js/script.js') }}"></script>
+  </head>
+  <body>
+    <h1>Upload Code for Debugging</h1>
+
+    <div class="upload-container">
+      <form id="debug-form">
+        <input type="file" id="file-input" required />
+        <br />
+        <button type="submit" id="debug-button">
+          Debug Code
+          <span class="loader" id="loader"></span>
+        </button>
+      </form>
+    </div>
+
+    <p class="error-message" id="error-message">Please select a file!</p>
+
+    <div class="output-container" id="original-code-container">
+      <h2>Original Code:</h2>
+      <pre><code id="original-code"></code></pre>
+    </div>
+
+    <div class="output-container" id="fixed-code-container">
+      <h2>Fixed Code:</h2>
+      <pre><code id="output"></code></pre>
+      <a id="download-link" download>Download Fixed Code</a>
+    </div>
+  </body>
+</html>

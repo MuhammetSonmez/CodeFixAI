@@ -1,0 +1,112 @@
+body {
+    font-family: "Arial", sans-serif;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #1e2a38;
+    color: #dce4ec;
+}
+
+h1 {
+    color: #4da8da;
+}
+
+.upload-container {
+    background: #243447;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(77, 168, 218, 0.5);
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #4da8da;
+    background: #f0f8ff;
+    color: #2a6f97;
+    border-radius: 5px;
+    width: 80%;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4da8da;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(77, 168, 218, 0.5);
+}
+
+button:hover {
+    background-color: #3a91c5;
+}
+
+
+
+.output-container {
+    display: none;
+    color: #2a6f97;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(77, 168, 218, 0.5);
+    text-align: left;
+    margin-top: 20px;
+}
+
+pre {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.error-message {
+    color: #ff3333;
+    font-weight: bold;
+    display: none;
+    margin-top: 10px;
+}
+
+#download-link {
+    display: none;
+    color: #8aff66;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+#download-link:hover {
+    text-decoration: underline;
+}
+
+.loader {
+    display: none;
+    width: 12px;
+    height: 12px;
+    border: 2px solid white;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+    
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+    
